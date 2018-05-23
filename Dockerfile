@@ -7,4 +7,4 @@ COPY . .
 RUN go build -o /app/main . 
 CMD ["/app/main"]
 
-EXPOSE 8080
+EXPOSE 3000
