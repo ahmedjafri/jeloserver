@@ -34,15 +34,29 @@ func Feed(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
 const mockFeed = `[
 	{
-		"url":"lols",
-		"comments": ["hi","lol"],
+		"url":"https://s3.amazonaws.com/jelo-videos/a.mp4",
+		"comments": ["a","lol"],
 		"postedDate":13,
 		"likes":1,
 		"commentsNum":2		
 	},
 	{
-		"url":"lols2",
-		"comments": ["ahhh","lol22"],
+		"url":"https://s3.amazonaws.com/jelo-videos/b.mp4",
+		"comments": ["b","lol22"],
+		"postedDate":133,
+		"likes":3,
+		"commentsNum":131		
+	},
+	{
+		"url":"https://s3.amazonaws.com/jelo-videos/c.mp4",
+		"comments": ["c","lol22"],
+		"postedDate":133,
+		"likes":3,
+		"commentsNum":131		
+	},
+	{
+		"url":"https://s3.amazonaws.com/jelo-videos/d.mp4",
+		"comments": ["d","lol22"],
 		"postedDate":133,
 		"likes":3,
 		"commentsNum":131		
