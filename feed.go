@@ -10,6 +10,7 @@ import (
 
 type video struct {
 	URL         string      `json:"url"`
+	Rendition   string      `json:"rendition"`
 	Comments    []string    `json:"comments"`
 	PostedDate  json.Number `json:"postedDate"`
 	Likes       json.Number `json:"likes"`
@@ -35,6 +36,7 @@ func Feed(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 const mockFeed = `[
 	{
 		"url":"https://s3.amazonaws.com/jelo-videos/a.mp4",
+		"rendition":"https://s3.amazonaws.com/jelo-renditions/a.jpg",
 		"comments": ["a","lol"],
 		"postedDate":13,
 		"likes":1,
@@ -42,6 +44,7 @@ const mockFeed = `[
 	},
 	{
 		"url":"https://s3.amazonaws.com/jelo-videos/b.mp4",
+		"rendition":"https://s3.amazonaws.com/jelo-renditions/b.jpg",
 		"comments": ["b","lol22"],
 		"postedDate":133,
 		"likes":3,
@@ -49,6 +52,7 @@ const mockFeed = `[
 	},
 	{
 		"url":"https://s3.amazonaws.com/jelo-videos/c.mp4",
+		"rendition":"https://s3.amazonaws.com/jelo-renditions/c.jpg",
 		"comments": ["c","lol22"],
 		"postedDate":133,
 		"likes":3,
@@ -56,6 +60,7 @@ const mockFeed = `[
 	},
 	{
 		"url":"https://s3.amazonaws.com/jelo-videos/d.mp4",
+		"rendition":"https://s3.amazonaws.com/jelo-renditions/d.jpg",
 		"comments": ["d","lol22"],
 		"postedDate":133,
 		"likes":3,
